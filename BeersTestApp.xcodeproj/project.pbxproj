@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		059D60CB23DB86B300494D76 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D60CA23DB86B300494D76 /* Beer.swift */; };
+		059D60CE23DB8ABF00494D76 /* BeersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D60CD23DB8ABF00494D76 /* BeersVM.swift */; };
+		059D60D123DB8C1000494D76 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D60D023DB8C1000494D76 /* Array.swift */; };
+		059D60D323DB8F8300494D76 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D60D223DB8F8300494D76 /* ReusableCell.swift */; };
+		059D60D523DB8FE700494D76 /* UITableView+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D60D423DB8FE700494D76 /* UITableView+Methods.swift */; };
+		059D60D923DB905800494D76 /* BeerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D60D723DB905800494D76 /* BeerCell.swift */; };
+		059D60DA23DB905800494D76 /* BeerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 059D60D823DB905800494D76 /* BeerCell.xib */; };
+		059D60DC23DB909C00494D76 /* UIView+Layers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D60DB23DB909C00494D76 /* UIView+Layers.swift */; };
 		05BA40C023DB6A1D00829211 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BA40BF23DB6A1D00829211 /* AppDelegate.swift */; };
 		05BA40C223DB6A1D00829211 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BA40C123DB6A1D00829211 /* SceneDelegate.swift */; };
 		05BA40C923DB6A1E00829211 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05BA40C823DB6A1E00829211 /* Assets.xcassets */; };
@@ -19,6 +27,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		059D60CA23DB86B300494D76 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		059D60CD23DB8ABF00494D76 /* BeersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersVM.swift; sourceTree = "<group>"; };
+		059D60D023DB8C1000494D76 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		059D60D223DB8F8300494D76 /* ReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		059D60D423DB8FE700494D76 /* UITableView+Methods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Methods.swift"; sourceTree = "<group>"; };
+		059D60D723DB905800494D76 /* BeerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCell.swift; sourceTree = "<group>"; };
+		059D60D823DB905800494D76 /* BeerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCell.xib; sourceTree = "<group>"; };
+		059D60DB23DB909C00494D76 /* UIView+Layers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layers.swift"; sourceTree = "<group>"; };
 		05BA40BC23DB6A1D00829211 /* BeersTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeersTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BA40BF23DB6A1D00829211 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05BA40C123DB6A1D00829211 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +59,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		059D60CC23DB8AA800494D76 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				059D60CD23DB8ABF00494D76 /* BeersVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		059D60CF23DB8BF400494D76 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				059D60D023DB8C1000494D76 /* Array.swift */,
+				059D60D423DB8FE700494D76 /* UITableView+Methods.swift */,
+				059D60DB23DB909C00494D76 /* UIView+Layers.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		059D60D623DB903300494D76 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				059D60D723DB905800494D76 /* BeerCell.swift */,
+				059D60D823DB905800494D76 /* BeerCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 		05BA40B323DB6A1C00829211 = {
 			isa = PBXGroup;
 			children = (
@@ -74,10 +117,12 @@
 			isa = PBXGroup;
 			children = (
 				05BA40D923DB6BEC00829211 /* App */,
+				059D60CF23DB8BF400494D76 /* Extensions */,
 				05BA40DF23DB6C7B00829211 /* Protocols */,
 				05BA40E423DB6DF400829211 /* Managers */,
 				05BA40DB23DB6C1500829211 /* Models */,
 				05BA40DC23DB6C2700829211 /* Views */,
+				059D60CC23DB8AA800494D76 /* ViewModels */,
 				05BA40DA23DB6BF900829211 /* ViewControllers */,
 			);
 			path = Classes;
@@ -94,8 +139,8 @@
 		05BA40D823DB6BCC00829211 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				05BA40CA23DB6A1E00829211 /* LaunchScreen.storyboard */,
 				05BA40E223DB6D8A00829211 /* Beers.storyboard */,
+				05BA40CA23DB6A1E00829211 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -120,6 +165,7 @@
 		05BA40DB23DB6C1500829211 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				059D60CA23DB86B300494D76 /* Beer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -127,6 +173,7 @@
 		05BA40DC23DB6C2700829211 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				059D60D623DB903300494D76 /* TableViewCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				05BA40E023DB6C9300829211 /* Storyboardable.swift */,
+				059D60D223DB8F8300494D76 /* ReusableCell.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -214,6 +262,7 @@
 				05BA40CC23DB6A1E00829211 /* LaunchScreen.storyboard in Resources */,
 				05BA40E323DB6D8A00829211 /* Beers.storyboard in Resources */,
 				05BA40C923DB6A1E00829211 /* Assets.xcassets in Resources */,
+				059D60DA23DB905800494D76 /* BeerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,10 +274,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				05BA40E123DB6C9300829211 /* Storyboardable.swift in Sources */,
+				059D60CE23DB8ABF00494D76 /* BeersVM.swift in Sources */,
+				059D60DC23DB909C00494D76 /* UIView+Layers.swift in Sources */,
+				059D60CB23DB86B300494D76 /* Beer.swift in Sources */,
 				05BA40C023DB6A1D00829211 /* AppDelegate.swift in Sources */,
 				05BA40C223DB6A1D00829211 /* SceneDelegate.swift in Sources */,
+				059D60D123DB8C1000494D76 /* Array.swift in Sources */,
 				05BA40E623DB6E0F00829211 /* WebService.swift in Sources */,
+				059D60D923DB905800494D76 /* BeerCell.swift in Sources */,
 				05BA40DE23DB6C5E00829211 /* BeersViewController.swift in Sources */,
+				059D60D523DB8FE700494D76 /* UITableView+Methods.swift in Sources */,
+				059D60D323DB8F8300494D76 /* ReusableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
