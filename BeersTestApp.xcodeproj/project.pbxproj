@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0509275123DCC9D700E66E44 /* AlertsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0509275023DCC9D700E66E44 /* AlertsManager.swift */; };
+		0509275323DCD68700E66E44 /* BTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0509275223DCD68700E66E44 /* BTError.swift */; };
+		0509275523DCDF0400E66E44 /* PrintExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0509275423DCDF0400E66E44 /* PrintExtensions.swift */; };
 		059D60CB23DB86B300494D76 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D60CA23DB86B300494D76 /* Beer.swift */; };
 		059D60CE23DB8ABF00494D76 /* BeersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D60CD23DB8ABF00494D76 /* BeersVM.swift */; };
 		059D60D123DB8C1000494D76 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D60D023DB8C1000494D76 /* Array.swift */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0509275023DCC9D700E66E44 /* AlertsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsManager.swift; sourceTree = "<group>"; };
+		0509275223DCD68700E66E44 /* BTError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTError.swift; sourceTree = "<group>"; };
+		0509275423DCDF0400E66E44 /* PrintExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintExtensions.swift; sourceTree = "<group>"; };
 		059D60CA23DB86B300494D76 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		059D60CD23DB8ABF00494D76 /* BeersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersVM.swift; sourceTree = "<group>"; };
 		059D60D023DB8C1000494D76 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
@@ -73,6 +79,7 @@
 				059D60D023DB8C1000494D76 /* Array.swift */,
 				059D60D423DB8FE700494D76 /* UITableView+Methods.swift */,
 				059D60DB23DB909C00494D76 /* UIView+Layers.swift */,
+				0509275423DCDF0400E66E44 /* PrintExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -166,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				059D60CA23DB86B300494D76 /* Beer.swift */,
+				0509275223DCD68700E66E44 /* BTError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				05BA40E523DB6E0F00829211 /* WebService.swift */,
+				0509275023DCC9D700E66E44 /* AlertsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -273,13 +282,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0509275523DCDF0400E66E44 /* PrintExtensions.swift in Sources */,
 				05BA40E123DB6C9300829211 /* Storyboardable.swift in Sources */,
 				059D60CE23DB8ABF00494D76 /* BeersVM.swift in Sources */,
 				059D60DC23DB909C00494D76 /* UIView+Layers.swift in Sources */,
 				059D60CB23DB86B300494D76 /* Beer.swift in Sources */,
 				05BA40C023DB6A1D00829211 /* AppDelegate.swift in Sources */,
 				05BA40C223DB6A1D00829211 /* SceneDelegate.swift in Sources */,
+				0509275323DCD68700E66E44 /* BTError.swift in Sources */,
 				059D60D123DB8C1000494D76 /* Array.swift in Sources */,
+				0509275123DCC9D700E66E44 /* AlertsManager.swift in Sources */,
 				05BA40E623DB6E0F00829211 /* WebService.swift in Sources */,
 				059D60D923DB905800494D76 /* BeerCell.swift in Sources */,
 				05BA40DE23DB6C5E00829211 /* BeersViewController.swift in Sources */,

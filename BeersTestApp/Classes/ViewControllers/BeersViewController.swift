@@ -28,6 +28,7 @@ class BeersViewController: UIViewController, Storyboardable {
         super.viewDidLoad()
         
         setupView()
+        getBeers()
     }
     
     
@@ -47,6 +48,14 @@ class BeersViewController: UIViewController, Storyboardable {
         let footer = UIView(frame: CGRect(x: 0, y: 0, width: 0.1, height: 0.1))
         footer.backgroundColor = .clear
         tableView.tableFooterView = footer
+    }
+    
+    private func getBeers() {
+        viewModel.getBeers(completion: { [weak self] in
+            self?.tableView.reloadData()
+        }, failure: { [weak self] error in
+            AlertsManager.showServerErrorAlert(with: error, to: self)
+        })
     }
     
     private func configureCell(_ cell: BeerCell, with beerItem: Beer) {

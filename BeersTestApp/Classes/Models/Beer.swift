@@ -32,3 +32,21 @@ struct Beer: Decodable {
         self.imageUrl = URL(string: urlStr ?? "")
     }
 }
+
+
+struct GetBeersParameters {
+    let page: Int
+    let countPerPage: Int
+    
+    struct Keys {
+        static let kPage = "page"
+        static let kCountPerPage = "per_page"
+    }
+    
+    var queryItems: [URLQueryItem] {
+        return [
+             URLQueryItem(name: Keys.kPage, value: page.description),
+             URLQueryItem(name: Keys.kCountPerPage, value: countPerPage.description)
+        ]
+    }
+}
