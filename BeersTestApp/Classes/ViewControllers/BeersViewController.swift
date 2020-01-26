@@ -15,6 +15,7 @@ class BeersViewController: UIViewController, Storyboardable {
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    
     // MARK: - Properties
     static var storyboardName: Storyboard {
         return .beers
@@ -26,7 +27,7 @@ class BeersViewController: UIViewController, Storyboardable {
     // MARK: - Overriden funcs
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setupView()
         getBeers()
     }
@@ -50,21 +51,13 @@ class BeersViewController: UIViewController, Storyboardable {
         tableView.tableFooterView = footer
     }
     
+    
     private func getBeers() {
         viewModel.getBeers(completion: { [weak self] in
             self?.tableView.reloadData()
         }, failure: { [weak self] error in
             AlertsManager.showServerErrorAlert(with: error, to: self)
         })
-        tableView.reloadData()
-    }
-    
-    private func configureCell(_ cell: BeerCell, at indexPath: IndexPath) {
-        let beerItem = viewModel.beerItem(at: indexPath.row)
-        cell.nameLabel.text = beerItem?.name
-        cell.tagilneLabel.text = beerItem?.tagline
-        cell.descriptionLabel.text = beerItem?.description
-        cell.logoImageView.sd_setImage(with: beerItem?.imageUrl, placeholderImage: UIImage(named: "imagePlaceholder"))
     }
     
 }
@@ -88,6 +81,14 @@ extension BeersViewController: UITableViewDataSource {
         return cell
     }
     
+    private func configureCell(_ cell: BeerCell, at indexPath: IndexPath) {
+        let beerItem = viewModel.beerItem(at: indexPath.row)
+        cell.nameLabel.text = beerItem?.name
+        cell.tagilneLabel.text = beerItem?.tagline
+        cell.descriptionLabel.text = beerItem?.description
+        cell.logoImageView.sd_setImage(with: beerItem?.imageUrl, placeholderImage: UIImage(named: "imagePlaceholder"))
+    }
+    
 }
 
 
@@ -99,7 +100,7 @@ extension BeersViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == viewModel.beerItemsCount - 1 &&
+        if indexPath.row == viewModel.beerItemsCount - 2 &&
             viewModel.isLoading == false &&
             viewModel.allPagesLoaded == false
         {
