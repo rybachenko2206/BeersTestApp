@@ -30,6 +30,23 @@ class BeerCell: UITableViewCell, ReusableCell {
         logoImageView.setCornerRadius(Constants.imageViewCornerRadius)
     }
     
+//    // MARK: - Static funcs
+//    
+//    static func estimatedHeight(with descriptionText: String?) -> CGFloat {
+//        guard let text = descriptionText else { return Constants.minimumHeight }
+//        let rlPadding: CGFloat = 10
+//        let width = UIScreen.main.bounds.width - (rlPadding * 2)
+//        let maxHeight = UIScreen.main.bounds.height / 2
+//        let font: UIFont = UIFont.systemFont(ofSize: 12, weight: .light)
+//        let possibleRect = CGSize(width: width, height: maxHeight)
+//        let boundingBox = text.boundingRect(with: possibleRect,
+//                                            options: .usesLineFragmentOrigin,
+//                                            attributes: [.font: font],
+//                                            context: nil)
+//        let otherHeight: CGFloat = 88
+//        return otherHeight + boundingBox.height
+//    }
+    
 }
 
 

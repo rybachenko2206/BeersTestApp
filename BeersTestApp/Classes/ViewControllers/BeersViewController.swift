@@ -56,13 +56,15 @@ class BeersViewController: UIViewController, Storyboardable {
         }, failure: { [weak self] error in
             AlertsManager.showServerErrorAlert(with: error, to: self)
         })
+        tableView.reloadData()
     }
     
-    private func configureCell(_ cell: BeerCell, with beerItem: Beer) {
-        cell.nameLabel.text = beerItem.name
-        cell.tagilneLabel.text = beerItem.tagline
-        cell.descriptionLabel.text = beerItem.description
-        cell.logoImageView.sd_setImage(with: beerItem.imageUrl, placeholderImage: UIImage(named: "imagePlaceholder"))
+    private func configureCell(_ cell: BeerCell, at indexPath: IndexPath) {
+        let beerItem = viewModel.beerItem(at: indexPath.row)
+        cell.nameLabel.text = beerItem?.name
+        cell.tagilneLabel.text = beerItem?.tagline
+        cell.descriptionLabel.text = beerItem?.description
+        cell.logoImageView.sd_setImage(with: beerItem?.imageUrl, placeholderImage: UIImage(named: "imagePlaceholder"))
     }
     
 }
@@ -80,10 +82,8 @@ extension BeersViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let beerItem = viewModel.item(at: indexPath.row) else { return UITableViewCell() }
-        
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: BeerCell.self)
-        configureCell(cell, with: beerItem)
+        configureCell(cell, at: indexPath)
         
         return cell
     }
@@ -97,4 +97,14 @@ extension BeersViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.beerItemsCount - 1 &&
+            viewModel.isLoading == false &&
+            viewModel.allPagesLoaded == false
+        {
+            getBeers()
+        }
+    }
+    
 }
